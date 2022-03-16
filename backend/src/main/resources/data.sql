@@ -26,3 +26,7 @@ INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Tercei
 INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) VALUES ('Trilha HTML', 'Trilha principal do curso', 1,'https://image.shutterstock.com/image-vector/book-icon-vector-on-white-600w-1897168756.jpg',1, 1);
 INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) VALUES ('Forum', 'Tire suas duvidas', 2,'https://image.shutterstock.com/image-vector/book-icon-vector-on-white-600w-1897168756.jpg',2, 1);
 INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) VALUES ('Trilha HTML', 'Lives exclusivas da turma', 3,'https://image.shutterstock.com/image-vector/book-icon-vector-on-white-600w-1897168756.jpg',0, 1);
+
+INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Capitulo 1', 'Neste Capitulo iremos começar', 1, 'https://image.shutterstock.com/image-vector/book-icon-vector-on-white-600w-1897168756.jpg', 1, null);
+INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Capitulo 2', 'Neste Capitulo iremos continuar', 1, 'https://image.shutterstock.com/image-vector/book-icon-vector-on-white-600w-1897168756.jpg', 1, 1);
+INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('Capitulo 3', 'Neste Capitulo iremos finalizar', 1, 'https://image.shutterstock.com/image-vector/book-icon-vector-on-white-600w-1897168756.jpg', 1, 2);
