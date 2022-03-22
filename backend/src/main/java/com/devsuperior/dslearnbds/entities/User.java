@@ -31,8 +31,7 @@ public class User implements Serializable{
 	private String password;
 	
 	
-//	@ManyToMany(fetch = FetchType.EAGER)
-	@ManyToMany(fetch = FetchType.LAZY)
+	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "tb_user_role",
 			joinColumns = @JoinColumn(name = "user_id"),
 			inverseJoinColumns = @JoinColumn(name = "role_id"))
@@ -44,13 +43,12 @@ public class User implements Serializable{
 	public User() {}
 
 
-	public User(long id, String name, String email, String password, Set<Role> roles) {
+	public User(long id, String name, String email, String password) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.password = password;
-		this.roles = roles;
 	}
 
 
@@ -82,10 +80,6 @@ public class User implements Serializable{
 		return roles;
 	}
 
-	public void setRoles(Set<Role> roles) {
-		this.roles = roles;
-	}
-	
 	public String getEmail() {
 		return email;
 	}
