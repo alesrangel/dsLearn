@@ -31,7 +31,7 @@ public class User implements UserDetails, Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	private String name;
 	private String email;
 	private String password;
@@ -58,11 +58,11 @@ public class User implements UserDetails, Serializable{
 	}
 
 
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -146,7 +146,14 @@ public class User implements UserDetails, Serializable{
 		return true;
 	}
 
-
+	public boolean hasHole(String roleName) {
+		for(Role role : roles) {
+			if(role.getAuthority().equals(roleName)) {
+				return true;
+			}
+		}
+		return false;
+	}
 	
 		
 }
